@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHARD: Pip and the Emerald Heart</title>
+<meta name="description" content="A pixel platformer about climbing a frozen mountain to bring spring back. 9 levels, a giant Yeti, and a scarf that lets you dash.">
+<link rel="icon" href="images/icon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root { --night:#1D1E26; --dusk:#2B2D42; --plum:#6B3E8C; --green:#00E756; --deep:#008751; --cream:#FFF6F0; --mist:#B8BCCB; --pink:#FF8FC7; --red:#FF5E7E; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--night); color:var(--mist); font:16px/1.7 system-ui, "Segoe UI", sans-serif; }
+  .pixel { font-family:"Press Start 2P", monospace; }
+  img { image-rendering:pixelated; display:block; max-width:100%; height:auto; }
+  main { max-width:960px; margin:0 auto; padding:0 16px 64px; }
+
+  header { text-align:center; padding:48px 16px 24px; background:linear-gradient(var(--night), var(--dusk)); }
+  h1 { font-family:"Press Start 2P", monospace; color:var(--green); font-size:clamp(40px, 9vw, 72px); margin:0; letter-spacing:4px; text-shadow:0 6px 0 var(--deep); }
+  .sub { font-family:"Press Start 2P", monospace; color:var(--mist); font-size:clamp(10px, 2.4vw, 14px); margin:20px 0 0; }
+  .tag { max-width:560px; margin:24px auto 0; color:var(--cream); font-size:18px; }
+
+  .hero { margin:32px auto 0; border:4px solid var(--deep); border-radius:6px; box-shadow:0 0 0 4px var(--night), 0 12px 40px rgba(0,231,86,.15); }
+
+  .download { display:inline-block; margin-top:32px; background:var(--green); color:var(--night); text-decoration:none; font-family:"Press Start 2P", monospace; font-size:16px; padding:18px 28px; border-radius:6px; box-shadow:0 6px 0 var(--deep); transition:transform .1s, box-shadow .1s; }
+  .download:hover { transform:translateY(2px); box-shadow:0 4px 0 var(--deep); }
+  .download:active { transform:translateY(6px); box-shadow:0 0 0 var(--deep); }
+  .small { font-size:13px; color:var(--mist); margin-top:14px; }
+
+  h2 { font-family:"Press Start 2P", monospace; color:var(--green); font-size:16px; margin:56px 0 18px; }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; }
+  figure { margin:0; background:var(--dusk); border-radius:6px; overflow:hidden; }
+  figcaption { font-family:"Press Start 2P", monospace; font-size:10px; color:var(--mist); padding:10px 12px; }
+
+  .story p { color:var(--cream); max-width:680px; }
+  .features { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; list-style:none; padding:0; margin:0; }
+  .features li { background:var(--dusk); border-left:4px solid var(--green); border-radius:4px; padding:12px 14px; }
+  .features b { color:var(--cream); }
+
+  table { border-collapse:collapse; width:100%; max-width:520px; }
+  td { padding:8px 10px; border-bottom:1px solid var(--dusk); }
+  td:first-child { color:var(--green); font-family:"Press Start 2P", monospace; font-size:11px; white-space:nowrap; }
+
+  ol li { margin-bottom:6px; }
+  code { background:var(--dusk); color:var(--cream); padding:2px 6px; border-radius:4px; }
+  footer { text-align:center; padding:32px 16px; font-size:13px; color:var(--mist); border-top:1px solid var(--dusk); }
+</style>
+</head>
+<body>
+<header>
+  <h1>SHARD</h1>
+  <p class="sub">PIP AND THE EMERALD HEART</p>
+  <p class="tag">The mountain's heart has cracked and spring never came. Climb all the way up, gather nine glowing shards, and face the Yeti at the top.</p>
+  <img class="hero" src="images/title.png" alt="SHARD title screen: Pip with his red scarf in front of a snowy mountain" width="912" height="512">
+  <a class="download" href="SHARD.zip" download>DOWNLOAD FOR WINDOWS</a>
+  <p class="small">Free · 28 MB · nothing to install</p>
+</header>
+
+<main>
+  <h2>SCREENSHOTS</h2>
+  <div class="shots">
+    <figure><img src="images/crystal-hollow.png" alt="Pip dashing between pink crystals over a spike floor" width="912" height="512"><figcaption>6. CRYSTAL HOLLOW</figcaption></figure>
+    <figure><img src="images/glacier.png" alt="Pip in front of a giant ice tower" width="912" height="512"><figcaption>7. THE GLACIER</figcaption></figure>
+    <figure><img src="images/summit.png" alt="Pip jumping past crumbling blocks towards a wall crystal" width="912" height="512"><figcaption>8. THE SUMMIT</figcaption></figure>
+    <figure><img src="images/yeti.png" alt="Pip facing the giant Yeti with the last shard in its forehead" width="912" height="512"><figcaption>9. THE YETI</figcaption></figure>
+  </div>
+
+  <section class="story">
+    <h2>THE STORY</h2>
+    <p>Every spring, the Emerald Heart beat once and the valley turned green. This year it cracked, and nine pieces flew up the mountain like shooting stars going the wrong way.</p>
+    <p>Pip has just turned eighteen and has never climbed higher than the sheep fields. But old Bram gives him a red scarf that remembers the heart's warmth, and Brae is waiting at the edge of the village with a few words for him before he goes...</p>
+  </section>
+
+  <h2>WHAT'S INSIDE</h2>
+  <ul class="features">
+    <li><b>9 handmade levels</b> from a sunny meadow to a frozen summit</li>
+    <li><b>A dash</b> you aim in any direction, refilled by pink crystals</li>
+    <li><b>Wall crystals</b> that let Pip run straight up walls</li>
+    <li><b>Sword combos, ember bolts</b> and a ground pound you can pogo off enemies</li>
+    <li><b>Slippery ice, springs, crumbling blocks</b> and falling icicles</li>
+    <li><b>A giant Yeti boss</b> with three angry phases</li>
+    <li><b>A story</b> with a little romance at the end</li>
+    <li><b>Key rebinding</b> and sound settings</li>
+  </ul>
+
+  <h2>CONTROLS</h2>
+  <table>
+    <tr><td>A / D</td><td>Run</td></tr>
+    <tr><td>W</td><td>Jump (hold for higher, jump at a wall to kick off it)</td></tr>
+    <tr><td>SPACE</td><td>Dash, aimed with W A S D</td></tr>
+    <tr><td>CLICK</td><td>Swing (click three times fast for a combo)</td></tr>
+    <tr><td>S + CLICK</td><td>Ground pound, in the air</td></tr>
+    <tr><td>E</td><td>Ember bolt</td></tr>
+    <tr><td>R</td><td>Restart the level</td></tr>
+    <tr><td>P</td><td>Settings and key bindings</td></tr>
+    <tr><td>F11</td><td>Fullscreen / window</td></tr>
+  </table>
+
+  <h2>HOW TO PLAY</h2>
+  <ol>
+    <li>Download <code>SHARD.zip</code> and unzip it.</li>
+    <li>Open the <code>SHARD</code> folder and double-click <code>SHARD.exe</code>.</li>
+    <li>If Windows says it protected your PC, click <b>More info</b>, then <b>Run anyway</b>. That shows up for any game that isn't from a big company.</li>
+  </ol>
+</main>
+
+<footer>
+  <p>Levels designed and the game directed by me. Code, pixel art and writing made with help from Claude (AI). Made in the Emerald fantasy console.</p>
+</footer>
+</body>
+</html>
